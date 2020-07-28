@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "micro-fe-base": {
+    "micro-fe-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/micro-fe-base",
+            "outputPath": "dist/micro-fe-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "micro-fe-base:build"
+            "browserTarget": "micro-fe-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "micro-fe-base:build:production"
+              "browserTarget": "micro-fe-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "micro-fe-base:build"
+            "browserTarget": "micro-fe-angular:build"
           }
         },
         "test": {
@@ -114,15 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "micro-fe-base:serve"
+            "devServerTarget": "micro-fe-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "micro-fe-base:serve:production"
+              "devServerTarget": "micro-fe-angular:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "micro-fe-base"
+    }
+  },
+  "defaultProject": "micro-fe-angular"
 }
