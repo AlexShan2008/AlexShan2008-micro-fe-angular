@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "yarn serve:qiankun",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:qiankun": "ng build --prod --deploy-url http://localhost:7102/",
+    "serve:qiankun": "ng serve --disable-host-check --port 7102 --base-href /angular --live-reload false"
   },
   "private": true,
   "dependencies": {
